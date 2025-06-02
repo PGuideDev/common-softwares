@@ -749,6 +749,72 @@
             </div>
         </div>
 
+        <!-- JetBrains系列IDE -->
+        <div class="icon-card" data-software="pycharm" data-category="dev">
+            <div class="icon-wrapper">
+                <img src="https://api.iconify.design/logos/pycharm.svg" alt="PyCharm" />
+            </div>
+            <h3 class="icon-name">PyCharm</h3>
+            <span class="icon-tag">#Python IDE</span>
+            <div class="icon-actions">
+                <button title="搜索" onclick="event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
+                </button>
+                <button title="下载"
+                    onclick="window.open('http://192.168.183.171:5244/softwares/dev-tools/pycharm-2025.1.1.1.exe', '_blank'); event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
+                </button>
+            </div>
+        </div>
+
+        <div class="icon-card" data-software="idea" data-category="dev">
+            <div class="icon-wrapper">
+                <img src="https://api.iconify.design/logos/intellij-idea.svg" alt="IntelliJ IDEA" />
+            </div>
+            <h3 class="icon-name">IntelliJ IDEA</h3>
+            <span class="icon-tag">#Java IDE</span>
+            <div class="icon-actions">
+                <button title="搜索" onclick="event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
+                </button>
+                <button title="下载" onclick="event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
+                </button>
+            </div>
+        </div>
+
+        <div class="icon-card" data-software="webstorm" data-category="dev">
+            <div class="icon-wrapper">
+                <img src="https://api.iconify.design/logos/webstorm.svg" alt="WebStorm" />
+            </div>
+            <h3 class="icon-name">WebStorm</h3>
+            <span class="icon-tag">#JavaScript IDE</span>
+            <div class="icon-actions">
+                <button title="搜索" onclick="event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
+                </button>
+                <button title="下载" onclick="event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
+                </button>
+            </div>
+        </div>
+
+        <div class="icon-card" data-software="clion" data-category="dev">
+            <div class="icon-wrapper">
+                <img src="https://api.iconify.design/logos/clion.svg" alt="CLion" />
+            </div>
+            <h3 class="icon-name">CLion</h3>
+            <span class="icon-tag">#C/C++ IDE</span>
+            <div class="icon-actions">
+                <button title="搜索" onclick="event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
+                </button>
+                <button title="下载" onclick="event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
+                </button>
+            </div>
+        </div>
+
         <div class="icon-card" data-software="git" data-category="dev">
             <div class="icon-wrapper">
                 <img src="https://api.iconify.design/logos/git-icon.svg" alt="Git" />
@@ -1028,6 +1094,46 @@
                 size: '85 MB',
                 system: 'Windows / macOS / Linux / 移动端',
                 website: 'https://zoom.us'
+            },
+            pycharm: {
+                icon: 'https://api.iconify.design/logos/pycharm.svg',
+                name: 'PyCharm',
+                tag: '#Python IDE',
+                description: 'PyCharm 是 JetBrains 推出的专业 Python 集成开发环境，提供智能代码补全、代码检查、即时错误高亮、代码重构和强大的调试器。支持 Django、Flask 等 Python 框架，是 Python 开发者的首选工具。',
+                version: '2025.1.1',
+                size: '825.8 MB',
+                system: 'Windows / macOS / Linux',
+                website: 'https://www.jetbrains.com/pycharm'
+            },
+            idea: {
+                icon: 'https://api.iconify.design/logos/intellij-idea.svg',
+                name: 'IntelliJ IDEA',
+                tag: '#Java IDE',
+                description: 'IntelliJ IDEA 是 JetBrains 推出的 Java 集成开发环境，被认为是目前最智能的 Java IDE。它提供强大的代码分析、智能代码补全、重构工具，支持多种框架和技术栈，包括 Spring、Hibernate 等。',
+                version: '2023.3',
+                size: '1.2 GB',
+                system: 'Windows / macOS / Linux',
+                website: 'https://www.jetbrains.com/idea'
+            },
+            webstorm: {
+                icon: 'https://api.iconify.design/logos/webstorm.svg',
+                name: 'WebStorm',
+                tag: '#JavaScript IDE',
+                description: 'WebStorm 是 JetBrains 推出的专业 JavaScript 开发工具，支持 JavaScript、TypeScript、React、Vue、Angular 等现代前端技术。提供智能代码补全、实时错误检测、强大的调试和测试工具，是前端开发者的得力助手。',
+                version: '2023.3',
+                size: '800 MB',
+                system: 'Windows / macOS / Linux',
+                website: 'https://www.jetbrains.com/webstorm'
+            },
+            clion: {
+                icon: 'https://api.iconify.design/logos/clion.svg',
+                name: 'CLion',
+                tag: '#C/C++ IDE',
+                description: 'CLion 是 JetBrains 推出的跨平台 C/C++ 集成开发环境，提供智能代码分析、重构工具、集成的调试器和 CMake 支持。支持多种编译器和标准，是现代 C/C++ 开发的强大工具。',
+                version: '2023.3',
+                size: '700 MB',
+                system: 'Windows / macOS / Linux',
+                website: 'https://www.jetbrains.com/clion'
             }
         };
 
@@ -1126,4 +1232,7 @@
     </script>
 </body>
 
+<!-- TODO: 增加对校园网IP的判断，以正确配置重定向策略 -->
+<!-- TODO: 链接知识库 -->
+<!-- TODO: 增加软件的版本、大小、系统要求等信息 --> -->
 </html>
