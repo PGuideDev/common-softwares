@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>常用软件推荐及下载</title>
-    <!-- Iconify CDN -->
-    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -52,6 +50,11 @@
             font-size: 20px;
             font-weight: 600;
             margin-right: 50px;
+        }
+
+        .nav-logo img {
+            width: 30px;
+            height: 30px;
         }
 
         .nav-links {
@@ -238,9 +241,10 @@
             justify-content: center;
         }
 
-        .icon-wrapper iconify-icon {
+        .icon-wrapper img {
             width: 100%;
             height: 100%;
+            object-fit: contain;
         }
 
         .icon-name {
@@ -273,10 +277,24 @@
             cursor: pointer;
             padding: 4px;
             transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .icon-actions button:hover {
             color: white;
+        }
+
+        .icon-actions img {
+            width: 20px;
+            height: 20px;
+            filter: brightness(0) invert(1) opacity(0.6);
+            transition: filter 0.3s;
+        }
+
+        .icon-actions button:hover img {
+            filter: brightness(0) invert(1) opacity(1);
         }
 
         /* 模态框样式 */
@@ -340,11 +358,25 @@
             padding: 8px;
             border-radius: 8px;
             transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .modal-close:hover {
             background: rgba(255, 255, 255, 0.1);
             color: white;
+        }
+
+        .modal-close img {
+            width: 24px;
+            height: 24px;
+            filter: brightness(0) invert(1) opacity(0.6);
+            transition: filter 0.3s;
+        }
+
+        .modal-close:hover img {
+            filter: brightness(0) invert(1) opacity(1);
         }
 
         .modal-body {
@@ -370,9 +402,10 @@
             margin-bottom: 30px;
         }
 
-        .modal-icon iconify-icon {
+        .modal-icon img {
             width: 100%;
             height: 100%;
+            object-fit: contain;
         }
 
         .modal-name {
@@ -445,15 +478,28 @@
             gap: 8px;
         }
 
+        .modal-btn img {
+            width: 20px;
+            height: 20px;
+        }
+
         .modal-btn-primary {
             background: #3b82f6;
             color: white;
+        }
+
+        .modal-btn-primary img {
+            filter: brightness(0) invert(1);
         }
 
         .modal-btn-secondary {
             background: rgba(255, 255, 255, 0.1);
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .modal-btn-secondary img {
+            filter: brightness(0) invert(1);
         }
 
         .modal-btn:hover {
@@ -496,7 +542,7 @@
     <!-- 导航栏 -->
     <nav>
         <div class="nav-logo">
-            <iconify-icon icon="mdi:cube" width="30" height="30"></iconify-icon>
+            <img src="https://api.iconify.design/mdi/cube.svg?color=white" alt="Logo" />
             <span>项导工作室</span>
         </div>
         <ul class="nav-links">
@@ -521,96 +567,96 @@
     <div class="icons-grid">
         <div class="icon-card" data-software="adobe">
             <div class="icon-wrapper">
-                <iconify-icon icon="logos:adobe" width="80" height="80"></iconify-icon>
+                <img src="https://api.iconify.design/logos/adobe.svg" alt="Adobe" />
             </div>
             <h3 class="icon-name">Adobe Creative Cloud</h3>
             <span class="icon-tag">#设计工具</span>
             <div class="icon-actions">
                 <button title="搜索" onclick="event.stopPropagation()">
-                    <iconify-icon icon="mdi:magnify" width="20" height="20"></iconify-icon>
+                    <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
                 </button>
                 <button title="下载" onclick="event.stopPropagation()">
-                    <iconify-icon icon="mdi:download" width="20" height="20"></iconify-icon>
+                    <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
                 </button>
             </div>
         </div>
 
         <div class="icon-card" data-software="vscode">
             <div class="icon-wrapper">
-                <iconify-icon icon="logos:visual-studio-code" width="80" height="80"></iconify-icon>
+                <img src="https://api.iconify.design/logos/visual-studio-code.svg" alt="VS Code" />
             </div>
             <h3 class="icon-name">Visual Studio Code</h3>
             <span class="icon-tag">#代码编辑器</span>
             <div class="icon-actions">
                 <button title="搜索" onclick="event.stopPropagation()">
-                    <iconify-icon icon="mdi:magnify" width="20" height="20"></iconify-icon>
+                    <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
                 </button>
                 <button title="下载" onclick="event.stopPropagation()">
-                    <iconify-icon icon="mdi:download" width="20" height="20"></iconify-icon>
+                    <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
                 </button>
             </div>
         </div>
 
         <div class="icon-card" data-software="chrome">
             <div class="icon-wrapper">
-                <iconify-icon icon="logos:chrome" width="80" height="80"></iconify-icon>
+                <img src="https://api.iconify.design/logos/chrome.svg" alt="Chrome" />
             </div>
             <h3 class="icon-name">Google Chrome</h3>
             <span class="icon-tag">#浏览器</span>
             <div class="icon-actions">
                 <button title="搜索" onclick="event.stopPropagation()">
-                    <iconify-icon icon="mdi:magnify" width="20" height="20"></iconify-icon>
+                    <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
                 </button>
                 <button title="下载" onclick="event.stopPropagation()">
-                    <iconify-icon icon="mdi:download" width="20" height="20"></iconify-icon>
+                    <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
                 </button>
             </div>
         </div>
 
         <div class="icon-card" data-software="git">
             <div class="icon-wrapper">
-                <iconify-icon icon="logos:git-icon" width="80" height="80"></iconify-icon>
+                <img src="https://api.iconify.design/logos/git-icon.svg" alt="Git" />
             </div>
             <h3 class="icon-name">Git</h3>
             <span class="icon-tag">#版本控制</span>
             <div class="icon-actions">
                 <button title="搜索" onclick="event.stopPropagation()">
-                    <iconify-icon icon="mdi:magnify" width="20" height="20"></iconify-icon>
+                    <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
                 </button>
                 <button title="下载" onclick="event.stopPropagation()">
-                    <iconify-icon icon="mdi:download" width="20" height="20"></iconify-icon>
+                    <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
                 </button>
             </div>
         </div>
 
         <div class="icon-card" data-software="nodejs">
             <div class="icon-wrapper">
-                <iconify-icon icon="logos:nodejs-icon" width="80" height="80"></iconify-icon>
+                <img src="https://api.iconify.design/logos/nodejs-icon.svg" alt="Node.js" />
             </div>
             <h3 class="icon-name">Node.js</h3>
             <span class="icon-tag">#运行环境</span>
             <div class="icon-actions">
                 <button title="搜索" onclick="event.stopPropagation()">
-                    <iconify-icon icon="mdi:magnify" width="20" height="20"></iconify-icon>
+                    <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
                 </button>
                 <button title="下载" onclick="event.stopPropagation()">
-                    <iconify-icon icon="mdi:download" width="20" height="20"></iconify-icon>
+                    <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
                 </button>
             </div>
         </div>
 
         <div class="icon-card" data-software="docker">
             <div class="icon-wrapper">
-                <iconify-icon icon="logos:docker-icon" width="80" height="80"></iconify-icon>
+                <img src="https://api.iconify.design/logos/docker-icon.svg" alt="Docker" />
             </div>
             <h3 class="icon-name">Docker</h3>
             <span class="icon-tag">#容器化</span>
             <div class="icon-actions">
                 <button title="搜索" onclick="event.stopPropagation()">
-                    <iconify-icon icon="mdi:magnify" width="20" height="20"></iconify-icon>
+                    <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
                 </button>
                 <button title="下载" onclick="event.stopPropagation()">
-                    <iconify-icon icon="mdi:download" width="20" height="20"></iconify-icon>
+                    <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
                 </button>
             </div>
         </div>
@@ -622,13 +668,13 @@
             <div class="modal-header">
                 <h2 class="modal-title" id="modalTitle">软件名称</h2>
                 <button class="modal-close" onclick="closeModal()">
-                    <iconify-icon icon="mdi:close" width="24" height="24"></iconify-icon>
+                    <img src="https://api.iconify.design/mdi/close.svg" alt="关闭" />
                 </button>
             </div>
             <div class="modal-body">
                 <div class="modal-left">
                     <div class="modal-icon" id="modalIcon">
-                        <iconify-icon icon="logos:adobe" width="120" height="120"></iconify-icon>
+                        <img src="https://api.iconify.design/logos/adobe.svg" alt="软件图标" />
                     </div>
                     <h3 class="modal-name" id="modalName">软件名称</h3>
                     <span class="modal-tag" id="modalTag">#标签</span>
@@ -659,11 +705,11 @@
                     </div>
                     <div class="modal-actions">
                         <button class="modal-btn modal-btn-primary">
-                            <iconify-icon icon="mdi:download" width="20" height="20"></iconify-icon>
+                            <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
                             立即下载
                         </button>
                         <button class="modal-btn modal-btn-secondary">
-                            <iconify-icon icon="mdi:information" width="20" height="20"></iconify-icon>
+                            <img src="https://api.iconify.design/mdi/information.svg" alt="信息" />
                             了解更多
                         </button>
                     </div>
@@ -676,7 +722,7 @@
         // 软件数据
         const softwareData = {
             adobe: {
-                icon: 'logos:adobe',
+                icon: 'https://api.iconify.design/logos/adobe.svg',
                 name: 'Adobe Creative Cloud',
                 tag: '#设计工具',
                 description: 'Adobe Creative Cloud 是全球领先的创意软件套装，包含 Photoshop、Illustrator、Premiere Pro、After Effects 等专业设计软件。无论是图片编辑、视频制作、网页设计还是 UI/UX 设计，Adobe 都提供了行业标准的解决方案。',
@@ -686,7 +732,7 @@
                 website: 'https://www.adobe.com'
             },
             vscode: {
-                icon: 'logos:visual-studio-code',
+                icon: 'https://api.iconify.design/logos/visual-studio-code.svg',
                 name: 'Visual Studio Code',
                 tag: '#代码编辑器',
                 description: 'Visual Studio Code 是微软开发的免费、开源的代码编辑器。它支持语法高亮、智能代码补全、代码片段、代码重构、集成终端、版本控制等功能。拥有丰富的扩展生态系统，支持几乎所有编程语言。',
@@ -696,7 +742,7 @@
                 website: 'https://code.visualstudio.com'
             },
             chrome: {
-                icon: 'logos:chrome',
+                icon: 'https://api.iconify.design/logos/chrome.svg',
                 name: 'Google Chrome',
                 tag: '#浏览器',
                 description: 'Google Chrome 是全球最受欢迎的网络浏览器，以其速度快、安全性高、扩展丰富而闻名。内置 Google 搜索和翻译功能，支持跨设备同步，为用户提供流畅的网络浏览体验。',
@@ -706,7 +752,7 @@
                 website: 'https://www.google.com/chrome'
             },
             git: {
-                icon: 'logos:git-icon',
+                icon: 'https://api.iconify.design/logos/git-icon.svg',
                 name: 'Git',
                 tag: '#版本控制',
                 description: 'Git 是一个开源的分布式版本控制系统，被广泛用于软件开发中的源代码管理。它能够高效处理从小型到大型项目的版本管理，支持非线性开发流程，是现代软件开发不可或缺的工具。',
@@ -716,7 +762,7 @@
                 website: 'https://git-scm.com'
             },
             nodejs: {
-                icon: 'logos:nodejs-icon',
+                icon: 'https://api.iconify.design/logos/nodejs-icon.svg',
                 name: 'Node.js',
                 tag: '#运行环境',
                 description: 'Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境。它使 JavaScript 可以在服务器端运行，具有事件驱动、非阻塞 I/O 的特点，非常适合构建高性能的网络应用程序。',
@@ -726,7 +772,7 @@
                 website: 'https://nodejs.org'
             },
             docker: {
-                icon: 'logos:docker-icon',
+                icon: 'https://api.iconify.design/logos/docker-icon.svg',
                 name: 'Docker',
                 tag: '#容器化',
                 description: 'Docker 是一个开源的容器化平台，可以将应用程序及其依赖打包到一个可移植的容器中。它简化了应用程序的部署和管理，确保应用在任何环境中都能一致运行，是 DevOps 和微服务架构的核心工具。',
@@ -745,7 +791,7 @@
             if (data) {
                 // 更新模态框内容
                 document.getElementById('modalTitle').textContent = data.name;
-                document.getElementById('modalIcon').innerHTML = `<iconify-icon icon="${data.icon}" width="120" height="120"></iconify-icon>`;
+                document.getElementById('modalIcon').innerHTML = `<img src="${data.icon}" alt="${data.name}" />`;
                 document.getElementById('modalName').textContent = data.name;
                 document.getElementById('modalTag').textContent = data.tag;
                 document.getElementById('modalDescription').textContent = data.description;
