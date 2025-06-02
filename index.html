@@ -168,10 +168,9 @@
             font-size: 72px;
             font-weight: 700;
             margin-bottom: 20px;
-        }
-
-        .hero h1 .highlight {
-            color: #3b82f6;
+            background: linear-gradient(90deg, #00d9ff, #ff0080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero p {
@@ -180,7 +179,17 @@
             margin-bottom: 40px;
         }
 
-
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
 
         .btn-primary {
             background: white;
@@ -201,7 +210,7 @@
         /* 搜索栏 */
         .search-section {
             max-width: 800px;
-            margin: 0 auto 60px;
+            margin: 0 auto 30px;
             padding: 0 20px;
         }
 
@@ -215,26 +224,43 @@
             font-size: 16px;
         }
 
-        .filter-buttons {
+        /* 分类标签栏 */
+        .category-tabs {
             display: flex;
+            justify-content: center;
             gap: 16px;
-            justify-content: flex-end;
-            margin-top: 20px;
+            margin: 0 auto 30px;
+            padding: 0 20px;
+            max-width: 1200px;
+            flex-wrap: wrap;
         }
 
-        .filter-btn {
-            padding: 8px 16px;
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 6px;
-            color: white;
+        .category-tab {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s;
         }
 
-        .filter-btn.active {
+        .category-tab.active {
+            background: rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .category-tab:hover:not(.active) {
             background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.4);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .category-tab img {
+            width: 24px;
+            height: 24px;
         }
 
         /* 图标网格 */
@@ -257,6 +283,21 @@
             cursor: pointer;
             position: relative;
             overflow: hidden;
+            opacity: 1;
+            transform: scale(1);
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .icon-card::before {
@@ -278,6 +319,7 @@
         .icon-card:hover {
             transform: translateY(-4px);
             border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
 
         .icon-wrapper {
@@ -555,6 +597,15 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid rgba(100, 149, 237, 0.2);
+            background: rgba(20, 25, 50, 0.5);
+            font-size: 0.9rem;
+            color: rgba(224, 231, 255, 0.6);
+        }
+
         /* 响应式设计 */
         @media (max-width: 768px) {
             .modal-body {
@@ -576,7 +627,6 @@
                 margin-right: 20px;
             }
 
-
             .hero h1 {
                 font-size: 48px;
             }
@@ -587,6 +637,15 @@
 
             .nav-links {
                 display: none;
+            }
+
+            .category-tabs {
+                gap: 10px;
+            }
+
+            .category-tab {
+                padding: 10px 16px;
+                font-size: 14px;
             }
         }
     </style>
@@ -602,6 +661,7 @@
         <ul class="nav-links">
             <li><a href="#">首页</a></li>
             <li><a href="https://docs.pguide.studio" target="_blank">项导文档</a></li>
+            <li><a href="v2.html">预览版</a></li>
         </ul>
         <div class="hero-buttons" style="margin-left: auto;">
             <a href="https://github.com/PGuideDev/common-softwares" class="btn btn-primary" target="_blank">
@@ -620,9 +680,43 @@
         <p>Common Softwares recommend & download</p>
     </div>
 
+    <!-- 搜索栏 -->
+    <div class="search-section">
+        <input type="text" class="search-input" placeholder="搜索软件...">
+    </div>
+
+    <!-- 分类标签栏 -->
+    <div class="category-tabs">
+        <div class="category-tab active" data-category="all">
+            <img src="https://api.iconify.design/mdi/apps.svg?color=white" alt="全部">
+            <span>全部</span>
+        </div>
+        <div class="category-tab" data-category="design">
+            <img src="https://api.iconify.design/mdi/palette.svg?color=white" alt="设计工具">
+            <span>设计工具</span>
+        </div>
+        <div class="category-tab" data-category="dev">
+            <img src="https://api.iconify.design/mdi/code-braces.svg?color=white" alt="开发工具">
+            <span>开发工具</span>
+        </div>
+        <div class="category-tab" data-category="browser">
+            <img src="https://api.iconify.design/mdi/web.svg?color=white" alt="浏览器">
+            <span>浏览器</span>
+        </div>
+        <div class="category-tab" data-category="system">
+            <img src="https://api.iconify.design/mdi/desktop-classic.svg?color=white" alt="系统工具">
+            <span>系统工具</span>
+        </div>
+        <div class="category-tab" data-category="productivity">
+            <img src="https://api.iconify.design/mdi/lightning-bolt.svg?color=white" alt="效率工具">
+            <span>效率工具</span>
+        </div>
+    </div>
+
     <!-- 图标网格 -->
     <div class="icons-grid">
-        <div class="icon-card" data-software="adobe">
+        <!-- 设计工具 -->
+        <div class="icon-card" data-software="adobe" data-category="design">
             <div class="icon-wrapper">
                 <img src="https://api.iconify.design/logos/adobe.svg" alt="Adobe" />
             </div>
@@ -638,7 +732,8 @@
             </div>
         </div>
 
-        <div class="icon-card" data-software="vscode">
+        <!-- 开发工具 -->
+        <div class="icon-card" data-software="vscode" data-category="dev">
             <div class="icon-wrapper">
                 <img src="https://api.iconify.design/logos/visual-studio-code.svg" alt="VS Code" />
             </div>
@@ -654,23 +749,7 @@
             </div>
         </div>
 
-        <div class="icon-card" data-software="chrome">
-            <div class="icon-wrapper">
-                <img src="https://api.iconify.design/logos/chrome.svg" alt="Chrome" />
-            </div>
-            <h3 class="icon-name">Google Chrome</h3>
-            <span class="icon-tag">#浏览器</span>
-            <div class="icon-actions">
-                <button title="搜索" onclick="event.stopPropagation()">
-                    <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
-                </button>
-                <button title="下载" onclick="event.stopPropagation()">
-                    <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
-                </button>
-            </div>
-        </div>
-
-        <div class="icon-card" data-software="git">
+        <div class="icon-card" data-software="git" data-category="dev">
             <div class="icon-wrapper">
                 <img src="https://api.iconify.design/logos/git-icon.svg" alt="Git" />
             </div>
@@ -686,7 +765,7 @@
             </div>
         </div>
 
-        <div class="icon-card" data-software="nodejs">
+        <div class="icon-card" data-software="nodejs" data-category="dev">
             <div class="icon-wrapper">
                 <img src="https://api.iconify.design/logos/nodejs-icon.svg" alt="Node.js" />
             </div>
@@ -702,12 +781,79 @@
             </div>
         </div>
 
-        <div class="icon-card" data-software="docker">
+        <div class="icon-card" data-software="docker" data-category="dev">
             <div class="icon-wrapper">
                 <img src="https://api.iconify.design/logos/docker-icon.svg" alt="Docker" />
             </div>
             <h3 class="icon-name">Docker</h3>
             <span class="icon-tag">#容器化</span>
+            <div class="icon-actions">
+                <button title="搜索" onclick="event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
+                </button>
+                <button title="下载" onclick="event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
+                </button>
+            </div>
+        </div>
+
+        <!-- 浏览器 -->
+        <div class="icon-card" data-software="chrome" data-category="browser">
+            <div class="icon-wrapper">
+                <img src="https://api.iconify.design/logos/chrome.svg" alt="Chrome" />
+            </div>
+            <h3 class="icon-name">Google Chrome</h3>
+            <span class="icon-tag">#浏览器</span>
+            <div class="icon-actions">
+                <button title="搜索" onclick="event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
+                </button>
+                <button title="下载" onclick="event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
+                </button>
+            </div>
+        </div>
+
+
+        <div class="icon-card" data-software="7zip" data-category="system">
+            <div class="icon-wrapper">
+                <img src="https://api.iconify.design/simple-icons/7zip.svg" alt="7-Zip" />
+            </div>
+            <h3 class="icon-name">7-Zip</h3>
+            <span class="icon-tag">#压缩工具</span>
+            <div class="icon-actions">
+                <button title="搜索" onclick="event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
+                </button>
+                <button title="下载" onclick="event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
+                </button>
+            </div>
+        </div>
+
+        <!-- 效率工具 -->
+        <div class="icon-card" data-software="slack" data-category="productivity">
+            <div class="icon-wrapper">
+                <img src="https://api.iconify.design/logos/slack-icon.svg" alt="Slack" />
+            </div>
+            <h3 class="icon-name">Slack</h3>
+            <span class="icon-tag">#团队协作</span>
+            <div class="icon-actions">
+                <button title="搜索" onclick="event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
+                </button>
+                <button title="下载" onclick="event.stopPropagation()">
+                    <img src="https://api.iconify.design/mdi/download.svg" alt="下载" />
+                </button>
+            </div>
+        </div>
+
+        <div class="icon-card" data-software="zoom" data-category="productivity">
+            <div class="icon-wrapper">
+                <img src="https://api.iconify.design/logos/zoom.svg" alt="Zoom" />
+            </div>
+            <h3 class="icon-name">Zoom</h3>
+            <span class="icon-tag">#视频会议</span>
             <div class="icon-actions">
                 <button title="搜索" onclick="event.stopPropagation()">
                     <img src="https://api.iconify.design/mdi/magnify.svg" alt="搜索" />
@@ -775,6 +921,11 @@
         </div>
     </div>
 
+    <footer>
+        <p>© 2023-present 项导工作室 | Build projects as our dreams.</p>
+        <p>联系我们: contact@pguide.studio</p>
+    </footer>
+
     <script>
         // 软件数据
         const softwareData = {
@@ -837,6 +988,46 @@
                 size: '450 MB',
                 system: 'Windows 10+ / macOS 10.15+ / Linux',
                 website: 'https://www.docker.com'
+            },
+            notepad: {
+                icon: 'https://api.iconify.design/logos/notepadplusplus.svg',
+                name: 'Notepad++',
+                tag: '#文本编辑',
+                description: 'Notepad++ 是一个免费的源代码编辑器和记事本替代品，支持多种编程语言。它具有语法高亮、代码折叠、宏录制、插件扩展等功能，是开发者和普通用户都喜爱的轻量级文本编辑器。',
+                version: '8.6.0',
+                size: '5.2 MB',
+                system: 'Windows',
+                website: 'https://notepad-plus-plus.org'
+            },
+            "7zip": {
+                icon: 'https://api.iconify.design/logos/7zip.svg',
+                name: '7-Zip',
+                tag: '#压缩工具',
+                description: '7-Zip 是一款开源的文件压缩和解压缩软件，支持多种压缩格式，包括其自有的7z格式。它具有高压缩比和强大的加密功能，界面简洁易用，是Windows平台上的优秀压缩工具。',
+                version: '23.01',
+                size: '1.5 MB',
+                system: 'Windows / Linux',
+                website: 'https://www.7-zip.org'
+            },
+            slack: {
+                icon: 'https://api.iconify.design/logos/slack-icon.svg',
+                name: 'Slack',
+                tag: '#团队协作',
+                description: 'Slack 是现代化的团队协作工具，集成了聊天、文件共享、语音视频通话等功能。通过频道组织讨论、集成第三方服务，Slack 帮助团队更高效地沟通和协作。',
+                version: '4.36.122',
+                size: '120 MB',
+                system: 'Windows / macOS / Linux / 移动端',
+                website: 'https://slack.com'
+            },
+            zoom: {
+                icon: 'https://api.iconify.design/logos/zoom.svg',
+                name: 'Zoom',
+                tag: '#视频会议',
+                description: 'Zoom 是一款流行的视频会议软件，提供高清视频会议、屏幕共享、会议录制等功能。支持大型会议、分组讨论室和虚拟背景，是远程工作和在线教育的理想选择。',
+                version: '5.17.11',
+                size: '85 MB',
+                system: 'Windows / macOS / Linux / 移动端',
+                website: 'https://zoom.us'
             }
         };
 
@@ -902,6 +1093,34 @@
                 } else {
                     card.style.display = 'none';
                 }
+            });
+        });
+
+        // 分类切换功能
+        const tabs = document.querySelectorAll('.category-tab');
+        const cards = document.querySelectorAll('.icon-card');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                // 移除所有标签的active类
+                tabs.forEach(t => t.classList.remove('active'));
+                // 添加当前标签的active类
+                this.classList.add('active');
+
+                const category = this.getAttribute('data-category');
+
+                // 显示/隐藏软件卡片
+                cards.forEach(card => {
+                    if (category === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        if (card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
             });
         });
     </script>
