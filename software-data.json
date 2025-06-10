@@ -1,0 +1,142 @@
+{
+    "adobe": {
+        "name": "Adobe Creative Cloud",
+        "icon": "https://api.iconify.design/logos/adobe.svg",
+        "tag": "#设计工具",
+        "description": "Adobe Creative Cloud 是 Adobe 公司推出的一套创意软件套装，包含 Photoshop、Illustrator、InDesign 等专业设计工具。",
+        "version": "2024",
+        "size": "约 20GB",
+        "system": "Windows 10/11, macOS 10.15+",
+        "website": "https://www.adobe.com/cn/creativecloud.html"
+    },
+    "vscode": {
+        "name": "Visual Studio Code",
+        "icon": "https://api.iconify.design/logos/visual-studio-code.svg",
+        "tag": "#代码编辑器",
+        "description": "Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，支持多种编程语言和丰富的插件生态系统。",
+        "version": "1.85.1",
+        "size": "约 100MB",
+        "system": "Windows 7+, macOS 10.11+, Linux",
+        "website": "https://code.visualstudio.com/"
+    },
+    "pycharm": {
+        "name": "PyCharm",
+        "icon": "https://api.iconify.design/logos/pycharm.svg",
+        "tag": "#Python IDE",
+        "description": "PyCharm 是一款功能强大的 Python IDE，提供智能代码补全、调试、测试等功能，支持 Web 开发框架。",
+        "version": "2023.3.4",
+        "size": "约 500MB",
+        "system": "Windows 7+, macOS 10.13+, Linux",
+        "website": "https://www.jetbrains.com/pycharm/"
+    },
+    "idea": {
+        "name": "IntelliJ IDEA",
+        "icon": "https://api.iconify.design/logos/intellij-idea.svg",
+        "tag": "#Java IDE",
+        "description": "IntelliJ IDEA 是一款智能的 Java IDE，提供强大的代码分析和重构工具，支持多种框架和构建工具。",
+        "version": "2023.3.4",
+        "size": "约 800MB",
+        "system": "Windows 7+, macOS 10.13+, Linux",
+        "website": "https://www.jetbrains.com/idea/"
+    },
+    "webstorm": {
+        "name": "WebStorm",
+        "icon": "https://api.iconify.design/logos/webstorm.svg",
+        "tag": "#JavaScript IDE",
+        "description": "WebStorm 是一款专业的 JavaScript IDE，提供智能代码补全、实时错误检测、重构等功能。",
+        "version": "2023.3.4",
+        "size": "约 600MB",
+        "system": "Windows 7+, macOS 10.13+, Linux",
+        "website": "https://www.jetbrains.com/webstorm/"
+    },
+    "clion": {
+        "name": "CLion",
+        "icon": "https://api.iconify.design/logos/clion.svg",
+        "tag": "#C/C++ IDE",
+        "description": "CLion 是一款智能的 C/C++ IDE，提供代码分析、重构、调试等功能，支持 CMake 和多种编译器。",
+        "version": "2023.3.4",
+        "size": "约 700MB",
+        "system": "Windows 7+, macOS 10.13+, Linux",
+        "website": "https://www.jetbrains.com/clion/"
+    },
+    "git": {
+        "name": "Git",
+        "icon": "https://api.iconify.design/logos/git-icon.svg",
+        "tag": "#版本控制",
+        "description": "Git 是一个分布式版本控制系统，用于跟踪文件变化，协调多人协作开发。",
+        "version": "2.42.0",
+        "size": "约 50MB",
+        "system": "Windows 7+, macOS 10.13+, Linux",
+        "website": "https://git-scm.com/"
+    },
+    "nodejs": {
+        "name": "Node.js",
+        "icon": "https://api.iconify.design/logos/nodejs-icon.svg",
+        "tag": "#运行环境",
+        "description": "Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境，用于构建快速、可扩展的网络应用。",
+        "version": "20.10.0",
+        "size": "约 30MB",
+        "system": "Windows 7+, macOS 10.13+, Linux",
+        "website": "https://nodejs.org/"
+    },
+    "docker": {
+        "name": "Docker",
+        "icon": "https://api.iconify.design/logos/docker-icon.svg",
+        "tag": "#容器化",
+        "description": "Docker 是一个开源的容器化平台，用于构建、部署和运行应用程序。",
+        "version": "24.0.7",
+        "size": "约 500MB",
+        "system": "Windows 10+, macOS 10.15+, Linux",
+        "website": "https://www.docker.com/"
+    },
+    "chrome": {
+        "name": "Google Chrome",
+        "icon": "https://api.iconify.design/logos/chrome.svg",
+        "tag": "#浏览器",
+        "description": "Google Chrome 是一款快速、安全、稳定的网页浏览器，支持丰富的扩展和开发者工具。",
+        "version": "120.0.6099.130",
+        "size": "约 100MB",
+        "system": "Windows 7+, macOS 10.13+, Linux",
+        "website": "https://www.google.com/chrome/"
+    },
+    "7zip": {
+        "name": "7-Zip",
+        "icon": "https://api.iconify.design/simple-icons/7zip.svg",
+        "tag": "#压缩工具",
+        "description": "7-Zip 是一款开源的文件压缩软件，支持多种压缩格式，提供高压缩比。",
+        "version": "23.01",
+        "size": "约 2MB",
+        "system": "Windows 7+, Linux",
+        "website": "https://www.7-zip.org/"
+    },
+    "slack": {
+        "name": "Slack",
+        "icon": "https://api.iconify.design/logos/slack-icon.svg",
+        "tag": "#团队协作",
+        "description": "Slack 是一款团队协作工具，提供即时通讯、文件共享、集成等功能。",
+        "version": "4.35.126",
+        "size": "约 200MB",
+        "system": "Windows 7+, macOS 10.13+, Linux",
+        "website": "https://slack.com/"
+    },
+    "zoom": {
+        "name": "Zoom",
+        "icon": "https://api.iconify.design/logos/zoom.svg",
+        "tag": "#视频会议",
+        "description": "Zoom 是一款视频会议软件，提供高清视频会议、屏幕共享、录制等功能。",
+        "version": "5.17.0.3480",
+        "size": "约 150MB",
+        "system": "Windows 7+, macOS 10.13+, Linux",
+        "website": "https://zoom.us/"
+    },
+    "zoom2": {
+        "name": "Zoom2",
+        "icon": "https://api.iconify.design/logos/zoom.svg",
+        "tag": "#视频会议",
+        "description": "Zoom 是一款视频会议软件，提供高清视频会议、屏幕共享、录制等功能。",
+        "version": "5.17.0.3480",
+        "size": "约 150MB",
+        "system": "Windows 7+, macOS 10.13+, Linux",
+        "website": "https://zoom.us/"
+    }
+} 
